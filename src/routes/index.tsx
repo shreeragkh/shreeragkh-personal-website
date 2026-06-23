@@ -218,7 +218,6 @@ function Portfolio() {
                 </div>
                 <h3 className="text-lg font-semibold">{item.title}</h3>
                 <p className="text-sm text-muted-foreground mt-1 font-medium">{item.org}</p>
-                <p className="text-sm text-muted-foreground mt-3">{item.desc}</p>
               </div>
             </div>
           ))}
