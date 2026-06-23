@@ -265,6 +265,38 @@ function Portfolio() {
         </div>
       </section>
 
+      {/* Research */}
+      <section id="research" className="mx-auto max-w-6xl px-6 py-20">
+        <SectionHeader eyebrow="Research" title="Publications & Research Work" />
+        <div className="mt-10">
+          <div className="rounded-3xl border border-border bg-card p-8 md:p-12 shadow-card relative overflow-hidden">
+            <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gradient-primary opacity-15 blur-3xl" />
+            <div className="relative">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow">
+                  <FlaskConical className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">{research.title}</h3>
+                  <p className="text-sm text-muted-foreground">{research.blurb}</p>
+                </div>
+              </div>
+              <ul className="space-y-3">
+                {research.points.map((point, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-mono text-primary">
+                <Sparkles className="h-3 w-3" /> {research.status}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Skills */}
       <section id="skills" className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeader eyebrow="Toolbelt" title="Frameworks & tools I work with" />
