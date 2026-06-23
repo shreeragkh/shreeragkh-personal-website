@@ -213,6 +213,29 @@ function Portfolio() {
         </div>
       </section>
 
+      {/* Timeline */}
+      <section id="timeline" className="mx-auto max-w-6xl px-6 py-20">
+        <SectionHeader eyebrow="Journey" title="Education & Experience" />
+        <div className="mt-10 relative max-w-3xl mx-auto">
+          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-border" />
+          {timeline.map((item, i) => (
+            <div key={i} className="relative pl-12 md:pl-20 pb-10 last:pb-0">
+              <div className="absolute left-4 md:left-8 top-0 h-8 w-8 -translate-x-1/2 rounded-full bg-gradient-primary flex items-center justify-center shadow-glow">
+                <item.icon className="h-4 w-4 text-primary-foreground" />
+              </div>
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-card transition-smooth hover:border-primary/40">
+                <div className="flex items-center gap-2 text-xs font-mono text-primary mb-2">
+                  <Calendar className="h-3 w-3" /> {item.date}
+                </div>
+                <h3 className="text-lg font-semibold">{item.title}</h3>
+                <p className="text-sm text-muted-foreground mt-1 font-medium">{item.org}</p>
+                <p className="text-sm text-muted-foreground mt-3">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Projects */}
       <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeader eyebrow="Projects" title="Things I've built" />
