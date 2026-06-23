@@ -86,6 +86,49 @@ const toolGroups = [
   },
 ];
 
+const timeline = [
+  {
+    type: "education",
+    title: "Master of Computer Applications (MCA)",
+    org: "Vellore Institute of Technology, Vellore",
+    date: "2025 – 2027",
+    desc: "Pursuing MCA with a focus on artificial intelligence, deep learning, and data science.",
+    icon: GraduationCap,
+  },
+  {
+    type: "internship",
+    title: "ML / Data Science Internship",
+    org: "Organization Name",
+    date: "Update with your dates",
+    desc: "Add your internship experience here — projects worked on, tools used, and outcomes.",
+    icon: Briefcase,
+  },
+  {
+    type: "education",
+    title: "Bachelor of Science in Computer Science",
+    org: "University of Calicut",
+    date: "2022 – 2025",
+    desc: "Built strong foundations in programming, algorithms, databases, and introductory machine learning.",
+    icon: GraduationCap,
+  },
+];
+
+const research = {
+  title: "Detecting Fake Open Source Projects",
+  blurb: "Developed a machine learning model to detect inactive or fake open-source repositories using multi-dimensional GitHub data.",
+  points: [
+    "Engineered features from repository metadata, contributor activity, bot contributions, code similarity, and contribution graphs.",
+    "Analyzed contributor behavior patterns to identify anomalies such as automated or low-quality contributions.",
+    "Incorporated code similarity analysis to detect duplicate or low-effort repositories.",
+    "Utilized contribution graph analysis to evaluate project activity consistency and engagement trends.",
+    "Built a complete ML pipeline including preprocessing, feature engineering, model training, and evaluation.",
+    "Applied SHAP explainability to interpret model predictions and identify key influencing features.",
+    "Conducted experiments on real-world and synthetic datasets.",
+  ],
+  status: "Currently preparing research work for publication.",
+  icon: FlaskConical,
+};
+
 function Portfolio() {
   return (
     <div className="min-h-screen bg-hero grid-bg">
