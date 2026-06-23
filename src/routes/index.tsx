@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   Brain, Code2, Database, Github, Linkedin, Mail, MapPin,
   Sparkles, Cpu, GitBranch, Terminal, Layers, BarChart3,
-  ArrowUpRight, Send,
+  ArrowUpRight, Send, GraduationCap, Briefcase, FlaskConical, Calendar,
 } from "lucide-react";
 import profileImg from "@/assets/profile.jpg";
 
@@ -86,6 +86,49 @@ const toolGroups = [
   },
 ];
 
+const timeline = [
+  {
+    type: "education",
+    title: "Master of Computer Applications (MCA)",
+    org: "Vellore Institute of Technology, Vellore",
+    date: "2025 – 2027",
+    desc: "Pursuing MCA with a focus on artificial intelligence, deep learning, and data science.",
+    icon: GraduationCap,
+  },
+  {
+    type: "internship",
+    title: "ML / Data Science Internship",
+    org: "Organization Name",
+    date: "Update with your dates",
+    desc: "Add your internship experience here — projects worked on, tools used, and outcomes.",
+    icon: Briefcase,
+  },
+  {
+    type: "education",
+    title: "Bachelor of Science in Computer Science",
+    org: "University of Calicut",
+    date: "2022 – 2025",
+    desc: "Built strong foundations in programming, algorithms, databases, and introductory machine learning.",
+    icon: GraduationCap,
+  },
+];
+
+const research = {
+  title: "Detecting Fake Open Source Projects",
+  blurb: "Developed a machine learning model to detect inactive or fake open-source repositories using multi-dimensional GitHub data.",
+  points: [
+    "Engineered features from repository metadata, contributor activity, bot contributions, code similarity, and contribution graphs.",
+    "Analyzed contributor behavior patterns to identify anomalies such as automated or low-quality contributions.",
+    "Incorporated code similarity analysis to detect duplicate or low-effort repositories.",
+    "Utilized contribution graph analysis to evaluate project activity consistency and engagement trends.",
+    "Built a complete ML pipeline including preprocessing, feature engineering, model training, and evaluation.",
+    "Applied SHAP explainability to interpret model predictions and identify key influencing features.",
+    "Conducted experiments on real-world and synthetic datasets.",
+  ],
+  status: "Currently preparing research work for publication.",
+  icon: FlaskConical,
+};
+
 function Portfolio() {
   return (
     <div className="min-h-screen bg-hero grid-bg">
@@ -96,7 +139,9 @@ function Portfolio() {
             <span className="text-gradient">{"<"}{NAME.split(" ")[0]}/{">"}</span>
           </a>
           <div className="hidden gap-8 text-sm text-muted-foreground md:flex">
+            <a href="#timeline" className="hover:text-foreground transition-smooth">Journey</a>
             <a href="#projects" className="hover:text-foreground transition-smooth">Projects</a>
+            <a href="#research" className="hover:text-foreground transition-smooth">Research</a>
             <a href="#skills" className="hover:text-foreground transition-smooth">Skills</a>
             <a href="#contact" className="hover:text-foreground transition-smooth">Contact</a>
           </div>
@@ -168,6 +213,29 @@ function Portfolio() {
         </div>
       </section>
 
+      {/* Timeline */}
+      <section id="timeline" className="mx-auto max-w-6xl px-6 py-20">
+        <SectionHeader eyebrow="Journey" title="Education & Experience" />
+        <div className="mt-10 relative max-w-3xl mx-auto">
+          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-border" />
+          {timeline.map((item, i) => (
+            <div key={i} className="relative pl-12 md:pl-20 pb-10 last:pb-0">
+              <div className="absolute left-4 md:left-8 top-0 h-8 w-8 -translate-x-1/2 rounded-full bg-gradient-primary flex items-center justify-center shadow-glow">
+                <item.icon className="h-4 w-4 text-primary-foreground" />
+              </div>
+              <div className="rounded-2xl border border-border bg-card p-6 shadow-card transition-smooth hover:border-primary/40">
+                <div className="flex items-center gap-2 text-xs font-mono text-primary mb-2">
+                  <Calendar className="h-3 w-3" /> {item.date}
+                </div>
+                <h3 className="text-lg font-semibold">{item.title}</h3>
+                <p className="text-sm text-muted-foreground mt-1 font-medium">{item.org}</p>
+                <p className="text-sm text-muted-foreground mt-3">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Projects */}
       <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
         <SectionHeader eyebrow="Projects" title="Things I've built" />
@@ -194,6 +262,38 @@ function Portfolio() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      {/* Research */}
+      <section id="research" className="mx-auto max-w-6xl px-6 py-20">
+        <SectionHeader eyebrow="Research" title="Publications & Research Work" />
+        <div className="mt-10">
+          <div className="rounded-3xl border border-border bg-card p-8 md:p-12 shadow-card relative overflow-hidden">
+            <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gradient-primary opacity-15 blur-3xl" />
+            <div className="relative">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow">
+                  <FlaskConical className="h-6 w-6" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">{research.title}</h3>
+                  <p className="text-sm text-muted-foreground">{research.blurb}</p>
+                </div>
+              </div>
+              <ul className="space-y-3">
+                {research.points.map((point, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-muted-foreground">
+                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-mono text-primary">
+                <Sparkles className="h-3 w-3" /> {research.status}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
