@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   Brain, Code2, Database, Github, Linkedin, Mail, MapPin,
   Sparkles, Cpu, GitBranch, Terminal, Layers, BarChart3,
-  ArrowUpRight, Send, GraduationCap, Briefcase, FlaskConical, Calendar,
+  ArrowUpRight, Send, GraduationCap, FlaskConical, Calendar,
 } from "lucide-react";
-import profileImg from "@/assets/profile.jpg";
+import profileAsset from "@/assets/profile.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,13 +18,12 @@ export const Route = createFileRoute("/")({
   component: Portfolio,
 });
 
-// TODO: Replace placeholder details (name, email, links, project copy) with your own.
-const NAME = "Your Name";
+const NAME = "Shreerag Namboothiri K H";
 const ROLE = "MCA Student · AI / ML Enthusiast";
 const LOCATION = "India";
-const EMAIL = "you@example.com";
-const GITHUB = "https://github.com/yourhandle";
-const LINKEDIN = "https://linkedin.com/in/yourhandle";
+const EMAIL = "shreeragkh@gmail.com";
+const GITHUB = "https://github.com/shreeragkh";
+const LINKEDIN = "https://www.linkedin.com/in/shreeragkh/";
 
 const projects = [
   {
@@ -62,22 +61,22 @@ const toolGroups = [
   {
     label: "ML / DL Frameworks",
     icon: Brain,
-    items: ["TensorFlow", "PyTorch", "Keras", "scikit-learn", "HuggingFace"],
+    items: ["Keras", "scikit-learn", "HuggingFace"],
   },
   {
     label: "Data & Viz",
     icon: Database,
-    items: ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Plotly"],
+    items: ["NumPy", "Pandas", "Matplotlib", "Seaborn"],
   },
   {
     label: "Tools & Platforms",
     icon: Cpu,
-    items: ["Jupyter", "Google Colab", "Docker", "VS Code", "Streamlit"],
+    items: ["Jupyter", "Google Colab", "VS Code", "Streamlit"],
   },
   {
     label: "Dev & Version Control",
     icon: GitBranch,
-    items: ["Git", "GitHub", "Linux", "Bash"],
+    items: ["Git", "GitHub", "Linux"],
   },
   {
     label: "Databases",
@@ -92,23 +91,13 @@ const timeline = [
     title: "Master of Computer Applications (MCA)",
     org: "Vellore Institute of Technology, Vellore",
     date: "2025 – 2027",
-    desc: "Pursuing MCA with a focus on artificial intelligence, deep learning, and data science.",
     icon: GraduationCap,
-  },
-  {
-    type: "internship",
-    title: "ML / Data Science Internship",
-    org: "Organization Name",
-    date: "Update with your dates",
-    desc: "Add your internship experience here — projects worked on, tools used, and outcomes.",
-    icon: Briefcase,
   },
   {
     type: "education",
     title: "Bachelor of Science in Computer Science",
     org: "University of Calicut",
     date: "2022 – 2025",
-    desc: "Built strong foundations in programming, algorithms, databases, and introductory machine learning.",
     icon: GraduationCap,
   },
 ];
@@ -198,7 +187,7 @@ function Portfolio() {
             <div className="absolute -inset-4 rounded-3xl bg-gradient-primary opacity-30 blur-2xl" />
             <div className="relative overflow-hidden rounded-3xl border border-border glass shadow-card">
               <img
-                src={profileImg}
+                src={profileAsset.url}
                 alt={`${NAME} — profile picture`}
                 width={1024}
                 height={1024}
@@ -267,7 +256,7 @@ function Portfolio() {
 
       {/* Research */}
       <section id="research" className="mx-auto max-w-6xl px-6 py-20">
-        <SectionHeader eyebrow="Research" title="Publications & Research Work" />
+        <SectionHeader eyebrow="Research" title="Research Work" />
         <div className="mt-10">
           <div className="rounded-3xl border border-border bg-card p-8 md:p-12 shadow-card relative overflow-hidden">
             <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gradient-primary opacity-15 blur-3xl" />
