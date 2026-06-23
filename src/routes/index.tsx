@@ -139,7 +139,9 @@ function Portfolio() {
             <span className="text-gradient">{"<"}{NAME.split(" ")[0]}/{">"}</span>
           </a>
           <div className="hidden gap-8 text-sm text-muted-foreground md:flex">
+            <a href="#timeline" className="hover:text-foreground transition-smooth">Journey</a>
             <a href="#projects" className="hover:text-foreground transition-smooth">Projects</a>
+            <a href="#research" className="hover:text-foreground transition-smooth">Research</a>
             <a href="#skills" className="hover:text-foreground transition-smooth">Skills</a>
             <a href="#contact" className="hover:text-foreground transition-smooth">Contact</a>
           </div>
