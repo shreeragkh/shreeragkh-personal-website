@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   Brain, Code2, Database, Github, Linkedin, Mail, MapPin,
   Sparkles, Cpu, GitBranch, Terminal, Layers, BarChart3,
-  ArrowUpRight, Send,
+  ArrowUpRight, Send, GraduationCap, Briefcase, FlaskConical, Calendar,
 } from "lucide-react";
 import profileImg from "@/assets/profile.jpg";
 
