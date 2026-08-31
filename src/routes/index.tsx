@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   Brain, Code2, Database, Github, Linkedin, Mail, MapPin, Cloud,
   Sparkles, Cpu, Server, ArrowUpRight, Send, GraduationCap,
-  FlaskConical, Calendar, FileText, Menu, X, ExternalLink,
+  Calendar, FileText, Menu, X, ExternalLink,
 } from "lucide-react";
 import profileAsset from "@/assets/profile.jpg.asset.json";
 import { Reveal } from "@/components/Reveal";
