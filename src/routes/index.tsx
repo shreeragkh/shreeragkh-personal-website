@@ -5,7 +5,8 @@ import {
   Sparkles, Cpu, Server, ArrowUpRight, Send, GraduationCap,
   Calendar, FileText, Menu, X, ExternalLink,
 } from "lucide-react";
-import profileAsset from "@/assets/profile.jpg.asset.json";
+import profileAsset from "@/assets/Shreeragkh.jpeg";
+import resumeAsset from "./shreerag_Namboothiri_K_H-1.pdf";
 import { Reveal } from "@/components/Reveal";
 
 export const Route = createFileRoute("/")({
@@ -29,7 +30,7 @@ const LOCATION = "India";
 const EMAIL = "shreeragkh@gmail.com";
 const GITHUB = "https://github.com/shreeragkh";
 const LINKEDIN = "https://www.linkedin.com/in/shreeragkh/";
-const RESUME_URL = "/resume.pdf"; // replace with your real resume file
+const RESUME_URL = resumeAsset;
 
 const projects = [
   {
@@ -217,7 +218,7 @@ function Portfolio() {
             <div className="absolute -inset-4 rounded-3xl bg-gradient-primary opacity-30 blur-2xl" />
             <div className="relative overflow-hidden rounded-3xl border border-border glass shadow-card">
               <img
-                src={profileAsset.url}
+                src={profileAsset}
                 alt={`${NAME} — profile picture`}
                 width={1024}
                 height={1024}
