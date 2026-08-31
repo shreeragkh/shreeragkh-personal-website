@@ -83,21 +83,6 @@ const timeline = [
   },
 ];
 
-const research = {
-  title: "Detecting Fake Open Source Projects",
-  blurb:
-    "Developed a machine learning model to detect inactive or fake open-source repositories using multi-dimensional GitHub data.",
-  points: [
-    "Engineered features from repository metadata, contributor activity, bot contributions, code similarity, and contribution graphs.",
-    "Analyzed contributor behavior patterns to identify anomalies such as automated or low-quality contributions.",
-    "Incorporated code similarity analysis to detect duplicate or low-effort repositories.",
-    "Utilized contribution graph analysis to evaluate project activity consistency and engagement trends.",
-    "Built a complete ML pipeline including preprocessing, feature engineering, model training, and evaluation.",
-    "Applied SHAP explainability to interpret model predictions and identify key influencing features.",
-    "Conducted experiments on real-world and synthetic datasets.",
-  ],
-  status: "Currently preparing research work for publication.",
-};
 
 const navLinks = [
   { href: "#top", label: "Home" },
