@@ -88,7 +88,6 @@ const navLinks = [
   { href: "#top", label: "Home" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
-  { href: "#research", label: "Research" },
   { href: "#contact", label: "Contact" },
 ];
 
