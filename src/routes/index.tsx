@@ -332,37 +332,6 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* Research */}
-      <section id="research" className="mx-auto max-w-6xl px-5 py-16 md:px-6 md:py-20">
-        <Reveal><SectionHeader eyebrow="Research" title="Research Work" /></Reveal>
-        <Reveal delay={80}>
-          <div className="relative mt-10 overflow-hidden rounded-3xl border border-border bg-card p-7 shadow-card md:p-12">
-            <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gradient-primary opacity-15 blur-3xl" />
-            <div className="relative">
-              <div className="mb-6 flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow">
-                  <FlaskConical className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold">{research.title}</h3>
-                  <p className="text-sm text-muted-foreground">{research.blurb}</p>
-                </div>
-              </div>
-              <ul className="space-y-3">
-                {research.points.map((point) => (
-                  <li key={point} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 font-mono text-xs text-primary">
-                <Sparkles className="h-3 w-3" /> {research.status}
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </section>
 
       {/* Contact */}
       <section id="contact" className="mx-auto max-w-6xl px-5 py-16 md:px-6 md:py-20">
