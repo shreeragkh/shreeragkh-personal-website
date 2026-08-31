@@ -3,7 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   Brain, Code2, Database, Github, Linkedin, Mail, MapPin, Cloud,
   Sparkles, Cpu, Server, ArrowUpRight, Send, GraduationCap,
-  FlaskConical, Calendar, FileText, Menu, X, ExternalLink,
+  Calendar, FileText, Menu, X, ExternalLink,
 } from "lucide-react";
 import profileAsset from "@/assets/profile.jpg.asset.json";
 import { Reveal } from "@/components/Reveal";
@@ -83,27 +83,11 @@ const timeline = [
   },
 ];
 
-const research = {
-  title: "Detecting Fake Open Source Projects",
-  blurb:
-    "Developed a machine learning model to detect inactive or fake open-source repositories using multi-dimensional GitHub data.",
-  points: [
-    "Engineered features from repository metadata, contributor activity, bot contributions, code similarity, and contribution graphs.",
-    "Analyzed contributor behavior patterns to identify anomalies such as automated or low-quality contributions.",
-    "Incorporated code similarity analysis to detect duplicate or low-effort repositories.",
-    "Utilized contribution graph analysis to evaluate project activity consistency and engagement trends.",
-    "Built a complete ML pipeline including preprocessing, feature engineering, model training, and evaluation.",
-    "Applied SHAP explainability to interpret model predictions and identify key influencing features.",
-    "Conducted experiments on real-world and synthetic datasets.",
-  ],
-  status: "Currently preparing research work for publication.",
-};
 
 const navLinks = [
   { href: "#top", label: "Home" },
   { href: "#skills", label: "Skills" },
   { href: "#projects", label: "Projects" },
-  { href: "#research", label: "Research" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -348,37 +332,6 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* Research */}
-      <section id="research" className="mx-auto max-w-6xl px-5 py-16 md:px-6 md:py-20">
-        <Reveal><SectionHeader eyebrow="Research" title="Research Work" /></Reveal>
-        <Reveal delay={80}>
-          <div className="relative mt-10 overflow-hidden rounded-3xl border border-border bg-card p-7 shadow-card md:p-12">
-            <div className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-gradient-primary opacity-15 blur-3xl" />
-            <div className="relative">
-              <div className="mb-6 flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground shadow-glow">
-                  <FlaskConical className="h-6 w-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold">{research.title}</h3>
-                  <p className="text-sm text-muted-foreground">{research.blurb}</p>
-                </div>
-              </div>
-              <ul className="space-y-3">
-                {research.points.map((point) => (
-                  <li key={point} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 font-mono text-xs text-primary">
-                <Sparkles className="h-3 w-3" /> {research.status}
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </section>
 
       {/* Contact */}
       <section id="contact" className="mx-auto max-w-6xl px-5 py-16 md:px-6 md:py-20">
